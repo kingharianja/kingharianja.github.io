@@ -446,3 +446,8 @@ typewriter.typeString("Saya Roy Harianja")
 
   gtag('config', 'UA-113929795-1');
 </script>
+<script>
+    $.getJSON('http://ip-api.com/json?callback=?', function(data) {
+        console.log(JSON.stringify(data, null, 2));
+    });
+</script>
