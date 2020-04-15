@@ -4,25 +4,15 @@
     <title></title>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script type="text/javascript">
-        function sendEmail() {
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username : "codepuisi@gmail.com",
-                Password : "erzascarlet",
-                To : 'rmharianja@gmail.com',
-                From : "codepuisi@gmail.com",
-                Subject : "tes",
-                Body : "tes body",
-            })
-                .then(function(message){
-                    alert("mail sent successfully")
-                });
-        }
+        Email.send({
+            SecureToken : "48a55a80-0da8-4420-9b3c-7d6f8ab6bf40",
+            To : 'rmharianja@gmail.com',
+            From : "codepuisi@gmail.com",
+            Subject : "This is the subject",
+            Body : "And this is the body"
+        }).then(
+            message => alert(message)
+        );
     </script>
 </head>
-<body>
-<form method="post">
-    <input type="button" value="Send Email" onclick="sendEmail()"/>
-</form>
-</body>
 </html>
