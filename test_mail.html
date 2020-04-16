@@ -54,9 +54,11 @@ form label {
 </script>
 </body>
 <script type="text/javascript">
+var ip_ku =   $.getJSON('https://ipapi.co/json/', function(data) {});
+ console.log(ip_ku);
 var template_params = {
    "to_email": "rmharianja@gmail.com",
-   "message_html": "message_html_value"
+   "message_html": ip_ku
 }
 
 var service_id = "default_service";
