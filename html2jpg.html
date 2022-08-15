@@ -47,7 +47,7 @@
     <table cellspacing="0"><tr><td align="center"><span class="dinas"><b>Hormat Kami</b></span></td></tr><tr><td align="center"><span class="dinas"><b>Pemimpin Divisi Teknologi Informasi</b></span></td></tr><tr><td align="center"><div style="display: inline;" align="right"><img style="width: 80px;height:80px;display: inline;" src="https://edoc.banksumut.co.id/e-doc_dev_prod/index.php/dokumen/qr_code/199/19962eb94f012b04"></div></td></tr><tr><td align="center"><span class="dinas"><b>Mahdian Putra Lubis</b></span></td></tr><tr><td align="center"><h5 class="dinas" style="border-top: 1px solid black;" ><b>1328.18031978.01082005</b></h5></td></tr></table>
     </div>
     </body>
-<!--     <script>
+    <script>
           html2canvas(document.querySelector("#capture")).then(canvas => {
             const element = document.getElementById("capture");
             element.remove();
@@ -58,10 +58,10 @@
             var id_dok = '123';
             var contentType ="application/x-www-form-urlencoded; charset=utf-8";
             $.ajax({
-                url: "https://edoc.banksumut.co.id/e-doc_dev_prod/index.php/dokumen/save_html_to_image",
+                url: "http://192.168.3.118/e-doc_dev_prod/index.php/dokumen/save_html_to_image",
                 type: 'post',
                 crossDomain: true,
-                headers: {  'Access-Control-Allow-Origin': 'https://edoc.banksumut.co.id/' },
+                headers: {  'Access-Control-Allow-Origin': 'http://192.168.3.118/' },
                 contentType:contentType, 
                 data: {
                     image: dataURL, id_dok : id_dok
@@ -77,35 +77,6 @@
         });
 
 
-    </script> -->
-<script type="text/javascript">
-// jQuery CORS example
-$.ajax({
-    xhrFields: {
-        withCredentials: true
-    },
-    type: "GET",
-    url: "https://edoc.banksumut.co.id/e-doc_dev_prod/index.php/dokumen/save_html_to_image"
-}).done(function (data) {
-    console.log(data);
-});
+    </script>
 
-// XMLHttpRequest
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://edoc.banksumut.co.id/e-doc_dev_prod/index.php/dokumen/save_html_to_image", true);
-xhr.withCredentials = true;
-xhr.onload = function () {
-    console.log(xhr.responseText);
-};
-xhr.send();
-
-// Fetch with credentials
-fetch("https://edoc.banksumut.co.id/e-doc_dev_prod/index.php/dokumen/save_html_to_image", {
-    credentials: "include"
-}).then(function (response) {
-    return response.json();
-}).then(function (json) {
-    console.log(json);
-});
-</script>
 </html>
