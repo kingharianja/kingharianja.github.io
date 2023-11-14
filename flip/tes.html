@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Source code</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+<div class="source-link">
+  <a class="show-source" data="simple-jquery-pdf">Show source code</a>
+</div>
+
+<div class="sample-container-box">
+  <div class="sample-container">
+
+  </div>
+</div>
+
+
+
+<script src="js/three.min.js"></script>
+<script src="js/pdf.min.js"></script>
+
+<script type="text/javascript">
+  window.PDFJS_LOCALE = {
+    pdfJsWorker: 'js/pdf.worker.js',
+    pdfJsCMapUrl: 'cmaps'
+  };
+</script>
+<script src="js/3dflipbook.min.js"></script>
+
+<script type="text/javascript">
+  $('.sample-container').FlipBook({
+    pdf: 'books/pdf/Annual-Report-Bank-Sumut-2010.pdf',
+    template: {"html":"templates\/default-book-view.html","styles":["css\/font-awesome.min.css","css\/short-black-book-view.css"],"script":"js\/default-book-view.js","sounds":{"startFlip":"sounds\/start-flip.mp3","endFlip":"sounds\/end-flip.mp3"}}  });
+</script>
+</body>
+</html>
